@@ -6,8 +6,37 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BBF960DA2E321A7E00AF02A5 /* testRunningWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BBF960D02E321A7D00AF02A5 /* testRunningWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBF960D82E321A7E00AF02A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBF960B62E321A6100AF02A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBF960CF2E321A7D00AF02A5;
+			remoteInfo = "testRunningWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BBF960DE2E321A7E00AF02A5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				BBF960DA2E321A7E00AF02A5 /* testRunningWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BBF960BE2E321A6100AF02A5 /* testRunning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testRunning.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF960D02E321A7D00AF02A5 /* testRunningWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "testRunningWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +45,22 @@
 			path = testRunning;
 			sourceTree = "<group>";
 		};
+		BBF960D12E321A7D00AF02A5 /* testRunningWatch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "testRunningWatch Watch App";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BBF960BB2E321A6100AF02A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF960CD2E321A7D00AF02A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				BBF960C02E321A6100AF02A5 /* testRunning */,
+				BBF960D12E321A7D00AF02A5 /* testRunningWatch Watch App */,
 				BBF960BF2E321A6100AF02A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				BBF960BE2E321A6100AF02A5 /* testRunning.app */,
+				BBF960D02E321A7D00AF02A5 /* testRunningWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,10 +98,12 @@
 				BBF960BA2E321A6100AF02A5 /* Sources */,
 				BBF960BB2E321A6100AF02A5 /* Frameworks */,
 				BBF960BC2E321A6100AF02A5 /* Resources */,
+				BBF960DE2E321A7E00AF02A5 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BBF960D92E321A7E00AF02A5 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				BBF960C02E321A6100AF02A5 /* testRunning */,
@@ -68,6 +113,28 @@
 			);
 			productName = testRunning;
 			productReference = BBF960BE2E321A6100AF02A5 /* testRunning.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBF960CF2E321A7D00AF02A5 /* testRunningWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBF960DB2E321A7E00AF02A5 /* Build configuration list for PBXNativeTarget "testRunningWatch Watch App" */;
+			buildPhases = (
+				BBF960CC2E321A7D00AF02A5 /* Sources */,
+				BBF960CD2E321A7D00AF02A5 /* Frameworks */,
+				BBF960CE2E321A7D00AF02A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BBF960D12E321A7D00AF02A5 /* testRunningWatch Watch App */,
+			);
+			name = "testRunningWatch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "testRunningWatch Watch App";
+			productReference = BBF960D02E321A7D00AF02A5 /* testRunningWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -81,6 +148,9 @@
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					BBF960BD2E321A6100AF02A5 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					BBF960CF2E321A7D00AF02A5 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
@@ -100,12 +170,20 @@
 			projectRoot = "";
 			targets = (
 				BBF960BD2E321A6100AF02A5 /* testRunning */,
+				BBF960CF2E321A7D00AF02A5 /* testRunningWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BBF960BC2E321A6100AF02A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF960CE2E321A7D00AF02A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +200,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BBF960CC2E321A7D00AF02A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBF960D92E321A7E00AF02A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBF960CF2E321A7D00AF02A5 /* testRunningWatch Watch App */;
+			targetProxy = BBF960D82E321A7E00AF02A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BBF960C72E321A6200AF02A5 /* Debug */ = {
@@ -251,11 +344,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = testRunning/testRunning.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6P4RF6HNAN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -279,11 +375,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = testRunning/testRunning.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6P4RF6HNAN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +398,70 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BBF960DC2E321A7E00AF02A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "testRunningWatch Watch App/testRunningWatch Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6P4RF6HNAN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = testRunningWatch;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.laxdin24.testRunning;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laxdin24.testRunning.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		BBF960DD2E321A7E00AF02A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "testRunningWatch Watch App/testRunningWatch Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6P4RF6HNAN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = testRunningWatch;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.laxdin24.testRunning;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laxdin24.testRunning.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
 			};
 			name = Release;
 		};
@@ -319,6 +482,15 @@
 			buildConfigurations = (
 				BBF960CA2E321A6200AF02A5 /* Debug */,
 				BBF960CB2E321A6200AF02A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBF960DB2E321A7E00AF02A5 /* Build configuration list for PBXNativeTarget "testRunningWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBF960DC2E321A7E00AF02A5 /* Debug */,
+				BBF960DD2E321A7E00AF02A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
