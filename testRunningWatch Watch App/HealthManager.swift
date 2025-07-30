@@ -38,7 +38,7 @@ class HealthManager: NSObject, ObservableObject {
         healthStore.requestAuthorization(toShare: typesToShare, read: typesToRead) { success, error in
             if success {
                 print("HealthKit 권한 획득 성공")
-                self.startActivityMonitoring()
+                // 자동 모니터링 시작 제거 - 수동으로만 시작
             } else {
                 print("HealthKit 권한 획득 실패: \(error?.localizedDescription ?? "Unknown error")")
             }
@@ -154,6 +154,8 @@ class HealthManager: NSObject, ObservableObject {
                     DispatchQueue.main.async {
                         self?.isRunning = true
                         self?.startHeartRateStreaming()
+                        // 초기 상태 전송
+                        self?.connectivity?.sendMessage(action: "running", heartRate: self?.heartRate ?? 0)
                     }
                 } else {
                     print("워크아웃 시작 실패: \(error?.localizedDescription ?? "Unknown error")")
