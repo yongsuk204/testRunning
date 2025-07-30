@@ -39,16 +39,6 @@
 		BBF960D02E321A7D00AF02A5 /* testRunningWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "testRunningWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		BB5201342E39C7630077AE80 /* Exceptions for "testRunningWatch Watch App" folder in "testRunningWatch Watch App" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"testRunningWatch-Watch-App-Info.plist",
-			);
-			target = BBF960CF2E321A7D00AF02A5 /* testRunningWatch Watch App */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BBF960C02E321A6100AF02A5 /* testRunning */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -57,9 +47,6 @@
 		};
 		BBF960D12E321A7D00AF02A5 /* testRunningWatch Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				BB5201342E39C7630077AE80 /* Exceptions for "testRunningWatch Watch App" folder in "testRunningWatch Watch App" target */,
-			);
 			path = "testRunningWatch Watch App";
 			sourceTree = "<group>";
 		};
