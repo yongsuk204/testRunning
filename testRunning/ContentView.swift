@@ -67,7 +67,7 @@ struct ContentView: View {
                         .onAppear {
                             startHeartAnimation()
                         }
-                        .onChange(of: connectivity.heartRate) { _ in
+                        .onChange(of: connectivity.heartRate) { oldValue, newValue in
                             startHeartAnimation()
                         }
                         

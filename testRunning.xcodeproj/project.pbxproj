@@ -39,6 +39,16 @@
 		BBF960D02E321A7D00AF02A5 /* testRunningWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "testRunningWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BB5201342E39C7630077AE80 /* Exceptions for "testRunningWatch Watch App" folder in "testRunningWatch Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"testRunningWatch-Watch-App-Info.plist",
+			);
+			target = BBF960CF2E321A7D00AF02A5 /* testRunningWatch Watch App */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BBF960C02E321A6100AF02A5 /* testRunning */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -47,6 +57,9 @@
 		};
 		BBF960D12E321A7D00AF02A5 /* testRunningWatch Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BB5201342E39C7630077AE80 /* Exceptions for "testRunningWatch Watch App" folder in "testRunningWatch Watch App" target */,
+			);
 			path = "testRunningWatch Watch App";
 			sourceTree = "<group>";
 		};
@@ -350,8 +363,8 @@
 				DEVELOPMENT_TEAM = 6P4RF6HNAN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "운동 중 심박수를 모니터링하기 위해 필요합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "운동 기록을 저장하기 위해 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -381,8 +394,8 @@
 				DEVELOPMENT_TEAM = 6P4RF6HNAN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "운동 중 심박수를 모니터링하기 위해 필요합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "운동 기록을 저장하기 위해 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -412,9 +425,10 @@
 				DEVELOPMENT_TEAM = 6P4RF6HNAN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "testRunningWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = testRunningWatch;
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "운동 중 심박수를 모니터링하기 위해 필요합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "운동 기록을 저장하기 위해 필요합니다.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.laxdin24.testRunning;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -444,9 +458,10 @@
 				DEVELOPMENT_TEAM = 6P4RF6HNAN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "testRunningWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = testRunningWatch;
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "운동 중 심박수를 모니터링하기 위해 필요합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "운동 기록을 저장하기 위해 필요합니다.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.laxdin24.testRunning;
 				LD_RUNPATH_SEARCH_PATHS = (
