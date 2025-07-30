@@ -1,38 +1,58 @@
-// testRunning Watch App/ContentView.swift
+// testRunningWatch Watch App/ContentView.swift
 
 import SwiftUI
 
 struct ContentView: View {
-    // 통신 객체와 현재 상태를 관리하는 변수
     @StateObject private var connectivity = WatchConnectivity()
-    @State private var status: String = "IDLE"
-
+    @StateObject private var healthManager = HealthManager()
+    
     var body: some View {
         VStack(spacing: 15) {
-            Text("STATUS: \(status)")
+            Text(healthManager.isRunning ? "RUNNING" : "IDLE")
                 .font(.headline)
                 .bold()
-
-            // 달리기 버튼
-            Button(action: {
-                connectivity.sendMessage(action: "running")
-                self.status = "RUNNING"
-            }) {
-                Text("Run").bold()
-                    .frame(maxWidth: .infinity)
+                .foregroundColor(healthManager.isRunning ? .green : .gray)
+            
+            if healthManager.isRunning {
+                HStack {
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.red)
+                        .scaleEffect(healthManager.heartRate > 0 ? 1.2 : 1.0)
+                        .animation(.easeInOut(duration: 0.3).repeatForever(autoreverses: true), value: healthManager.heartRate)
+                    
+                    Text("\(Int(healthManager.heartRate)) BPM")
+                        .font(.title2)
+                        .bold()
+                }
             }
-            .tint(.green) // iOS 15+ 스타일
-
-            // 정지 버튼
-            Button(action: {
-                connectivity.sendMessage(action: "standing")
-                self.status = "STANDING"
-            }) {
-                Text("Stop").bold()
-                    .frame(maxWidth: .infinity)
+            
+            // 테스트용 수동 컨트롤
+            VStack(spacing: 10) {
+                Text("Manual Control")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                
+                HStack {
+                    Button(action: {
+                        healthManager.startRunning()
+                    }) {
+                        Image(systemName: "play.fill")
+                            .foregroundColor(.green)
+                    }
+                    .disabled(healthManager.isRunning)
+                    
+                    Button(action: {
+                        healthManager.stopRunning()
+                    }) {
+                        Image(systemName: "stop.fill")
+                            .foregroundColor(.red)
+                    }
+                    .disabled(!healthManager.isRunning)
+                }
             }
-            .tint(.red) // iOS 15+ 스타일
         }
-        .font(.title2)
+        .onAppear {
+            healthManager.setConnectivity(connectivity)
+        }
     }
 }

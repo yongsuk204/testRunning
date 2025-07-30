@@ -1,9 +1,8 @@
-// testRunning Watch App/WatchConnectivity.swift
+// testRunningWatch Watch App/WatchConnectivity.swift
 
 import Foundation
 import WatchConnectivity
 
-// 아이폰으로 메시지를 보내는 역할만 담당하는 클래스
 class WatchConnectivity: NSObject, WCSessionDelegate, ObservableObject {
     private let session = WCSession.default
 
@@ -15,12 +14,21 @@ class WatchConnectivity: NSObject, WCSessionDelegate, ObservableObject {
         }
     }
 
-    // 아이폰으로 메시지를 보내는 함수
-    func sendMessage(action: String) {
-        guard session.isReachable else { return } // 아이폰 연결 상태 확인
-        session.sendMessage(["action": action], replyHandler: nil)
+    // 아이폰으로 메시지를 보내는 함수 (심박수 포함)
+    func sendMessage(action: String, heartRate: Double) {
+        guard session.isReachable else { return }
+        session.sendMessage([
+            "action": action,
+            "heartRate": heartRate
+        ], replyHandler: nil) { error in
+            print("메시지 전송 실패: \(error.localizedDescription)")
+        }
     }
     
     // --- WCSessionDelegate 필수 구현 항목 ---
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        if let error = error {
+            print("세션 활성화 오류: \(error.localizedDescription)")
+        }
+    }
 }
